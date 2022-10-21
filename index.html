@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <title>Employee/Company thingy</title>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+        table.listing {border: 1px solid;}
+      html, body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      }
+      form {
+      border: 5px solid #f1f1f1;
+      }
+      input[type=text], input[type=password] {
+      width: 100%;
+      padding: 16px 8px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      }
+      .icon {
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      color: #4286f4;
+      }
+      button {
+      background-color: #4286f4;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      cursor: grab;
+      width: 48%;
+      }
+      h1 {
+      text-align:center;
+      fone-size:18;
+      }
+      button:hover {
+      opacity: 0.8;
+      }
+      .formcontainer {
+      text-align: center;
+      margin: 24px 50px 12px;
+      }
+      .container {
+      padding: 16px 0;
+      text-align:left;
+      }
+      span.psw {
+      float: right;
+      padding-top: 0;
+      padding-right: 15px;
+      }
+      /* Change styles for span on extra small screens */
+      @media screen and (max-width: 300px) {
+      span.psw {
+      display: block;
+      float: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php">
+      <h1>ADD EMPLOYEE</h1>
+      <div class="icon">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="formcontainer">
+      <div class="container">
+        <label for="emp_name"><strong>Name</strong></label>
+        <input type="text" placeholder="Employee Name" name="emp_name" required>
+      </div>
+      <div class="container">
+        <label for="emp_work"><strong>Works for</strong></label>
+        <select>
+        <option value=""></option>
+        </select>
+      </div>
+      <button type="submit"><strong>ADD EMPLOYEE</strong></button>
+      </div>
+    </form>
+
+
+    <form action="/action_page.php">
+      <h1>ADD COMPANY</h1>
+      <div class="icon">
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="formcontainer">
+        <div class="container">
+        <label for="comp_name"><strong>Name</strong></label>
+        <input type="text" placeholder="Company Name" name="comp_name" required>
+      </div>
+      <div class="container">
+        <label for="comp_addr"><strong>Address</strong></label>
+        <input type="text" placeholder="Company Address" name="comp_addr" required>
+      </div>
+      <button type="submit"><strong>ADD COMPANY</strong></button>
+      </div>
+    </form>
+
+    <table id = 'companies' class="listing">
+        <tr>
+            <th>Company Name</th>
+            <th>Company Address</th>
+            <th>Employees</th>
+        </tr>
+    </table>
+
+    <table id = 'employees' class="listing">
+        <tr>
+            <th>Employee Name</th>
+            <th>Works for</th>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+    </body>
+</html>
